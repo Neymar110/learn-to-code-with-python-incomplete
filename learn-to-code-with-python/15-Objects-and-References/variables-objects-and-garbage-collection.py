@@ -1,0 +1,1 @@
+#garbage collection is basically when a object is no longer used in the code thus it is thrown out of memory

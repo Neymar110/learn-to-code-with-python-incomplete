@@ -1,0 +1,1 @@
+# The clear method removes ALL element from a list and the lists length will be reduced to zero

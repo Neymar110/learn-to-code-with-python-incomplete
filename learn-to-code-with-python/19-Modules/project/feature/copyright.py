@@ -1,0 +1,1 @@
+date_of_copyright = 200

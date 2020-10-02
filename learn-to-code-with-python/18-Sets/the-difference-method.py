@@ -1,4 +1,4 @@
-# The difference method looks for the things that are in the first set inputed that aren't in the seccond set
+# The difference method looks for the things that are in the first set inputed that aren't in the second set
 # it also uses the minus or - symbol
 
 set1 = {"Messi", "Ronaldinio", "Ronaldo", "Luis Figo", "Zlatan", "Zidane", "Neymar", "Mbappe"}

@@ -5,4 +5,4 @@ class Phones:
 
 list2 = Phones(list1)
 
-print(list2.phones[1])
+print(list2.phones[1])  

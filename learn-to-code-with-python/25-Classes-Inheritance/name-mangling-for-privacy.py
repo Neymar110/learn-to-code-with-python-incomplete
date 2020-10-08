@@ -3,7 +3,7 @@ class Nonsense():
         self.name = name
     
     def __rev(self):
-        print(self.name[::-1])
+        print(self.name[::-1 ])
 
 class idk(Nonsense):
     pass

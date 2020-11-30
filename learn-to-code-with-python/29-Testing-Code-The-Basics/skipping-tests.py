@@ -17,7 +17,7 @@ class TestCode(unittest.TestCase):
     def test_division(self):
         self.assertEqual(division(50, 2), 25)
     #If you need to skip a test:
-    @unittest.skip("Multiplication function is not functioning.") # Skips Argument is the Reason You Need to Skip
+    @unittest.skip("Multiplication function is not functioning0.") # Skips Argument is the Reason You Need to Skip
     def test_multiplication(self):
         self.assertEqual(multiplication(2, 4), 8)
 

@@ -20,6 +20,11 @@ Timothy = Customers(1000, 0, [])
 
 School_Bake_Sale = Bake_Sale.Sale(Isaac, Timothy)
 
-print(Timothy.bought_cakes)
+# print(Timothy.bought_cakes)
 
+def assertion_function(Owner, Buyer):
+    assert isinstance(Buyer.choice, int), "Choice Is Going To Be Used To Index And Must Be An Integer"
+    assert isinstance(Buyer.bought_cakes, list), "Bought Cakes has to be a list as we plan to append a new cake once bought"    
+
+assertion_function(Isaac, Timothy)
 

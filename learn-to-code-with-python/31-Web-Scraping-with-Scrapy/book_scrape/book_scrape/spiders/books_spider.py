@@ -9,6 +9,6 @@ class BooksSpider(scrapy.Spider):
         titles = response.css("article.product_pod h3 a::attr(title)").getall()
         prices = response.css("article.product_pod div.product_price p.price_color::text").getall()   
         for title in titles:
-            yield {"title": title, "price":prices}
+            print({"title": title, "price":prices})
 
 

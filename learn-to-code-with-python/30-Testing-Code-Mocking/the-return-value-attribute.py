@@ -4,6 +4,8 @@ Example = Mock(return_value = "Anything")
 
 print(Example())
 
+Example.-
+
 Example.return_value = 25
 
 print(Example())

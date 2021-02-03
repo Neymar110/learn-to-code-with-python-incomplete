@@ -1,4 +1,4 @@
-import rps_logic
+import tkinter as tk
 
 root = tk.Tk()
 

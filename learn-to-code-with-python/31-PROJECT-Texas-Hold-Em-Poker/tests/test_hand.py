@@ -65,4 +65,62 @@ class Hand_Test(unittest.TestCase):
         hand = Hand(cards = cards)
         
         self.assertEqual(hand.best_rank(), "High Card")
+
+    def test_figures_outbestrank_when_flush(self):
+        cards = [Card(rank = rank, suit = "Hearts")
+        for rank in ["2", "5", "8", "10", "Ace"]]
+        
+        hand = Hand(cards = cards)
+        
+        self.assertEqual(hand.best_rank(), "Flush")
+
+    def test_figures_out_full_house_is_best_rank(self):
+        cards = [
+            Card(rank = "3", suit = "Cloves"),
+            Card(rank = "3", suit = "Hearts"),
+            Card(rank = "3", suit = "Spades"),
+            Card(rank = "9", suit = "Diamonds"),
+            Card(rank = "9", suit = "Spades")
+        ]
+        hand = Hand(cards = cards)
+
+        self.assertEqual(hand.best_rank(), "Full House")
+    
+    def test_figures_out_four_os_a_kind_is_best_rank(self):
+        cards = [
+            Card(rank = "3", suit = "Cloves"),
+            Card(rank = "3", suit = "Hearts"),
+            Card(rank = "3", suit = "Spades"),
+            Card(rank = "3", suit = "Diamonds"),
+            Card(rank = "9", suit = "Spades")
+        ]
+        hand = Hand(cards = cards)
+
+        self.assertEqual(hand.best_rank(), "Four of a Kind")
+    
+    def test_figures_out_striaght_flush_is_best_rank(self):
+        cards = [
+            Card(rank = "3", suit = "Cloves"),
+            Card(rank = "4", suit = "Cloves"),
+            Card(rank = "5", suit = "Cloves"),
+            Card(rank = "6", suit = "Cloves"),
+            Card(rank = "7", suit = "Cloves")
+        ]
+        hand = Hand(cards = cards)
+
+        self.assertEqual(hand.best_rank(), "Straight Flush")
+    
+    def test_figures_out_royal_flush_is_best_rank(self):
+        cards = [
+            Card(rank = "10", suit = "Cloves"),
+            Card(rank = "Jack", suit = "Cloves"),
+            Card(rank = "Queen", suit = "Cloves"),
+            Card(rank = "King", suit = "Cloves"),
+            Card(rank = "Ace", suit = "Cloves")
+        ]
+        hand = Hand(cards = cards)
+
+        self.assertEqual(hand.best_rank(), "Royal Flush") 
+
+    
     

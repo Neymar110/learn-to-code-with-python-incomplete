@@ -42,23 +42,6 @@ class HandTest(unittest.TestCase):
                 ace_of_spades
             ]
         )
-
-    def test_figures_out_royal_flush_is_best_rank(self):
-        cards = [
-            Card(rank = "10", suit = "Cloves"),
-            Card(rank = "Jack", suit = "Cloves"),
-            Card(rank = "Queen", suit = "Cloves"),
-            Card(rank = "King", suit = "Cloves"),
-            Card(rank = "Ace", suit = "Cloves")
-        ]
-
-        hand = Hand()
-        hand.add_cards(cards)
-
-        self.assertEqual(
-            hand.best_rank(),
-            "Royale Flush"
-        )
     
     def test_interacts_with_validator_to_get_winning_hand(self):
         class HandWithOneTest(Hand):
@@ -72,4 +55,4 @@ class HandTest(unittest.TestCase):
         hand.add_cards(cards = cards)
 
         self.assertEqual(hand.best_rank(),
-        "Pair", [ace_of_hearts, ace_of_spades])
+        (0, "Pair", [ace_of_hearts, ace_of_spades]))

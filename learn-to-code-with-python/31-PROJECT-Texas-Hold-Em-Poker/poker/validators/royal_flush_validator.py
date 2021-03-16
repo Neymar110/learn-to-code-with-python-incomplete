@@ -1,6 +1,6 @@
 from poker.validators import StraightFlushValidator
 
-class RoyaleFlushValidator():
+class RoyalFlushValidator():
     def __init__(self, cards):
         self.cards = cards
         self.name = "Royale Flush"

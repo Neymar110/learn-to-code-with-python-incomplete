@@ -11,4 +11,4 @@ from .flush_validator import FlushValidator
 from .full_house_validator import FullHouseValidator
 from .four_of_a_kind_validtor import FourOfAKindValidator
 from .straight_flush_validator import StraightFlushValidator
-from .royale_flush_validator import RoyaleFlushValidator
+from .royal_flush_validator import RoyalFlushValidator

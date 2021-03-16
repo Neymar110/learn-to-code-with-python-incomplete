@@ -1,7 +1,7 @@
 import unittest
 
 from poker.card import Card
-from poker.validators import RoyaleFlushValidator
+from poker.validators import RoyalFlushValidator
 
 class RoyalFlushValidatorTest(unittest.TestCase):
     def test_validates_that_cards_do_not_have_straight_flush_ending_in_ace(self):
@@ -14,7 +14,7 @@ class RoyalFlushValidatorTest(unittest.TestCase):
             Card(rank = "Ace", suit = "Diamonds")
         ]
 
-        validator = RoyaleFlushValidator(cards = cards)
+        validator = RoyalFlushValidator(cards = cards)
 
         self.assertEqual(
             validator.is_valid(),
@@ -32,7 +32,7 @@ class RoyalFlushValidatorTest(unittest.TestCase):
             Card(rank = "Ace", suit = "Diamonds")
         ]
 
-        validator = RoyaleFlushValidator(cards = cards)
+        validator = RoyalFlushValidator(cards = cards)
 
         self.assertEqual(
             validator.is_valid(),
@@ -56,7 +56,7 @@ class RoyalFlushValidatorTest(unittest.TestCase):
             Card(rank = "Ace", suit = "Diamonds")
         ]
 
-        validator = RoyaleFlushValidator(cards = cards)
+        validator = RoyalFlushValidator(cards = cards)
 
         self.assertEqual(
             validator.valid_cards(),

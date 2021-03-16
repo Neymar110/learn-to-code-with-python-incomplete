@@ -1,5 +1,5 @@
 from poker.validators import (
-    RoyaleFlushValidator,
+    RoyalFlushValidator,
     StraightFlushValidator,
     FourOfAKindValidator,
     FullHouseValidator,
@@ -14,7 +14,7 @@ from poker.validators import (
 
 class Hand():
     VALIDATORS = (
-        RoyaleFlushValidator,
+        RoyalFlushValidator,
         StraightFlushValidator,
         FourOfAKindValidator,
         FullHouseValidator,
@@ -41,7 +41,7 @@ class Hand():
         self.cards = copy
 
     def best_rank(self):
-        for validator_klass in self.VALIDATORS:
+        for index, validator_klass in enumerate(self.VALIDATORS):
             validator = validator_klass(cards = self.cards)
             if validator.is_valid():
-                return validator.name
+                return (index, validator.name, validator.valid_cards())
